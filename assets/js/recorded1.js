@@ -1,5 +1,5 @@
 const dummyDB = [
-    {email: 'codequarry@gmail.com', password: 'tech'}
+    {email: 'codequarry@gmail.com', password: 'codequarry2023!'}
   ]
   
   const form = document.getElementById("form");
