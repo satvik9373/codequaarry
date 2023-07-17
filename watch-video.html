@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>watch</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./assets/css/PLAYLIST.css">
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">Codequarry</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="./assets/img/pic-1.jpg" class="image" alt="">
+         <h3 class="name">COMPUTER SCIENCE (C.S)</h3>
+         <p class="role">student</p>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="./assets/img/Systems and technology programming company logo.png" class="image" alt="">
+      <h3 class="name">Codequarry</h3>
+      <p class="role">student</p>
+   </div>
+
+   <nav class="navbar">
+      <a href="./index.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="./teachers.html"><i class="fas fa-home"></i><span>Team</span></a>
+   </nav>
+
+</div>
+
+<section class="watch-video">
+
+   <div class="video-container">
+      <div class="video">
+         <video src="images/vid-1.mp4" controls poster="./assets/img/post-1-1.png" id="video"></video>
+      </div>
+      <h3 class="title">complete HTML tutorial (part 01)</h3>
+      <div class="info">
+         <p class="date"><i class="fas fa-calendar"></i><span>18-7-2023</span></p>
+      </div>
+      <div class="tutor">
+         <img src="./assets/img/pic-6.jpg" alt="">
+         <div>
+            <h3>Satvik Chaturvedi</h3>
+            <span>developer</span>
+         </div>
+      </div>
+      <form action="" method="post" class="flex">
+         <a href="playlist.html" class="inline-btn">view playlist</a>
+         <button><i class="far fa-heart"></i><span>like</span></button>
+      </form>
+      <p class="description">
+        
+Satvik Chaturvedi, a CodeQuarry faculty, adeptly instructs students in HTML, enabling them to master the fundamentals and create dynamic web pages under his expert guidance.
+      </p>
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+   &copy; copyright @ 2023 by <span>Codequarry</span> | all rights reserved!
+
+</footer>
+
+<!-- custom js file link  -->
+<script src="./assets/js/PLAYLIST.js"></script>
+   
+</body>
+</html>
