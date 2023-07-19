@@ -234,4 +234,39 @@ a:hover {
   background-color: #222;
 }
 
+/* ... previous CSS code ... */
+
+.form-control select {
+  background-color: #201d3a;
+  border: 1px solid #888;
+  border-radius: 4px;
+  display: block;
+  font-size: 14px;
+  font-family: inherit;
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  appearance: none; /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form-control select:focus {
+  outline:none;
+}
+
+.form-control.success select {
+  border-color: #2ecc71;
+}
+
+.form-control.error select {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  /* Adjust position for both input and select */
+  top: 10px;
+}
+
+/* ... remaining CSS code ... */
 

@@ -1,5 +1,5 @@
 const dummyDB = [
-    {email: 'codequarry@gmail.com', password: 'binaryworld'}
+    {email: 'codequarry@gmail.com', password: 'cyberninja'}
   ]
   
   const form = document.getElementById("form");
@@ -15,7 +15,7 @@ const dummyDB = [
     
     checkInput();
   })
-  
+
   function checkInput() {
     const emailValue = email.value.trim();
     const passwordValue = password.value;
