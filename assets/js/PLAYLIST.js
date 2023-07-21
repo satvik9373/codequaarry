@@ -1,47 +1,64 @@
-import videos from "./videos.js";
+let toggleBtn = document.getElementById('toggle-btn');
+let body = document.body;
+let darkMode = localStorage.getItem('dark-mode');
 
-function loadVideos() {
-  const playlist_area = document.querySelector(".playlist");
-
-  videos.forEach((video, index) => {
-    const div = document.createElement("div");
-
-    div.innerHTML = `
-      <div class="playlist-video ${index + 1 === 1 && "active"}">
-        <video src=${video.src} muted></video>
-        <label class="playlist-video-info">${video.title}</label>
-      </div>
-    `;
-
-    playlist_area.appendChild(div);
-  });
-
-  addOnClick();
+const enableDarkMode = () =>{
+   toggleBtn.classList.replace('fa-sun', 'fa-moon');
+   body.classList.add('dark');
+   localStorage.setItem('dark-mode', 'enabled');
 }
 
-function addOnClick() {
-  const video_main = document.querySelector(".main-video-content");
-  const playlist_video = document.querySelectorAll(".playlist-video");
-
-  playlist_video.forEach((item, i) => {
-    if (!i) {
-      setVideo(video_main, item);
-    }
-
-    item.onclick = () => {
-      playlist_video.forEach((video) => video.classList.remove("active"));
-      item.classList.add("active");
-
-      setVideo(video_main, item);
-    };
-  });
+const disableDarkMode = () =>{
+   toggleBtn.classList.replace('fa-moon', 'fa-sun');
+   body.classList.remove('dark');
+   localStorage.setItem('dark-mode', 'disabled');
 }
 
-function setVideo(video_main, item) {
-  video_main.children[0].src = item.children[0].getAttribute("src");
-  video_main.children[1].innerHTML = item.children[1].innerHTML;
+if(darkMode === 'enabled'){
+   enableDarkMode();
 }
 
-loadVideos();
+toggleBtn.onclick = (e) =>{
+   darkMode = localStorage.getItem('dark-mode');
+   if(darkMode === 'disabled'){
+      enableDarkMode();
+   }else{
+      disableDarkMode();
+   }
+}
 
+let profile = document.querySelector('.header .flex .profile');
 
+document.querySelector('#user-btn').onclick = () =>{
+   profile.classList.toggle('active');
+   search.classList.remove('active');
+}
+
+let search = document.querySelector('.header .flex .search-form');
+
+document.querySelector('#search-btn').onclick = () =>{
+   search.classList.toggle('active');
+   profile.classList.remove('active');
+}
+
+let sideBar = document.querySelector('.side-bar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+   sideBar.classList.toggle('active');
+   body.classList.toggle('active');
+}
+
+document.querySelector('#close-btn').onclick = () =>{
+   sideBar.classList.remove('active');
+   body.classList.remove('active');
+}
+
+window.onscroll = () =>{
+   profile.classList.remove('active');
+   search.classList.remove('active');
+
+   if(window.innerWidth < 1200){
+      sideBar.classList.remove('active');
+      body.classList.remove('active');
+   }
+}
