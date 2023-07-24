@@ -20,7 +20,7 @@
 
     /* Cards colors */
     --card-main-color : whitesmoke;
-    --card-1-secondary-color: rgb(192, 82, 82);
+    --card-1-secondary-color: whitesmoke;
     --card-2-secondary-color: rgb(67,53,27);
     --card-3-secondary-color: rgb(178,180,179);
     --card-4-secondary-color: rgb(96,109,117);
@@ -336,4 +336,10 @@ body{
         color: var(--heart-icon-color);
         transform: scale(1.0);
     }
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
 }
